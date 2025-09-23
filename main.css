@@ -1,9 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Felipa&family=Italianno&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #303030;
+  color: #fff;
+
+  --primary-color: #ff3030;
+  --text-color: #ddd;
+}
+.title {
+  margin: 0;
+  /*   font-size: 7rem;
+  line-height: 7rem; */
+  font-size: clamp(5rem, 10vw, 5rem);
+  font-family: "Italianno", serif;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+
 .hero {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 10%;
-  height: 10%;
-  padding: 0;
-  margin: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("./Picture/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.button-opentime {
+  padding: 1em 2em; /* Abstand innen */
+  margin: 50px;
+  font-size: 1rem; /* Schriftgröße */
+  font-family: "Inter", sans-serif; /* Schriftart */
+  background-color: #dc203c; /* Hintergrundfarbe */
+  color: white; /* Textfarbe */
+  border: 1px solid var(--primary-color); /* Rand bleibt */
+  cursor: pointer; /* Mauszeiger zeigt Hand */
+  transition: background 0.3s; /* sanfter Übergang bei Hover */
+}
+.button-opentime:hover {
+  background-color: rgba(0, 0, 0, 0); /* dunkler beim Hover */
 }
