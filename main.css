@@ -7,14 +7,24 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: #303030;
   color: #fff;
+
   --primary-color: #ff3030;
 }
 
 .title {
   margin: 0;
-  font-size: clamp(5em, calc(1em + 1vw), 10em);
+  /*   font-size: clamp(1em, calc(1em + 1vw), 2rem); */
   font-family: "Italianno", serif;
+  font-size: 7rem;
+  line-height: 7rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .title {
+    font-size: 5rem;
+  }
 }
 
 .subtitle {
