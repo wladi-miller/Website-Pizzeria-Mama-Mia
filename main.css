@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Felipa&family=Italianno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.platzhalter {
+  height: 300vh;
+}
 
 * {
   margin: 0;
@@ -8,27 +13,44 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: #303030;
-  color: #fff;
+  color: #fff; /* Text Farbe */
 
   --primary-color: #ff3030;
 }
 
 .title {
-  margin: 0;
+  margin: 0 0 1rem 0; /* 0oben 0rechts 1rem unten  0links*/
   /*   font-size: clamp(1em, calc(1em + 1vw), 2rem); */
-  font-family: "Italianno", serif;
-  font-size: 7rem;
-  line-height: 7rem;
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (min-width: 600px) {
   .title {
-    font-size: 5rem;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-action {
+    font-size: 1.2rem; /* Schriftgröße */
+    padding: 1.2rem 2.5rem; /* 1rem oben und unten, 2rem links und rechts */
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .title {
+    font-size: 6rem;
+    line-height: 6rem;
   }
 }
 
 .subtitle {
   font-size: 1rem;
+  color: #ddd;
 }
 
 .hero {
@@ -45,17 +67,18 @@ body {
   text-align: center;
 }
 
-.button-opentime {
-  padding: 1em 2em; /* Abstand innen */
-  margin: 50px;
+.hero-action {
+  margin-top: 4rem;
+  padding: 1rem 2rem; /* 1rem oben und unten, 2rem links und rechts */
+  border: 0.1rem solid #dc203c; /* Rahmen */
+  color: white; /* Textfarbe */
+  text-decoration: none; /* kein Unterstrich */
   font-size: 1rem; /* Schriftgröße */
   font-family: "Inter", sans-serif; /* Schriftart */
   background-color: #dc203c; /* Hintergrundfarbe */
-  color: white; /* Textfarbe */
-  border: 1px solid var(--primary-color); /* Rand bleibt */
-  cursor: pointer; /* Mauszeiger zeigt Hand */
-  transition: background 0.3s; /* sanfter Übergang bei Hover */
+  transition: all 0.3s ease-in-out; /* sanfter Übergang */
 }
-.button-opentime:hover {
-  background-color: rgba(0, 0, 0, 0); /* dunkler beim Hover */
+.hero-action:hover {
+  background-color: transparent; /* dunkler beim Hover */
+  color: #dc203c; /* Textfarbe beim Hover */
 }
