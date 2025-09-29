@@ -82,3 +82,29 @@ body {
   background-color: transparent; /* dunkler beim Hover */
   color: #dc203c; /* Textfarbe beim Hover */
 }
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 5rem;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.nav-action {
+  margin-top: 0rem;
+  /* padding: 1rem 2rem; /* 1rem oben und unten, 2rem links und rechts */
+  color: white; /* Textfarbe */
+  font-size: 0.5rem; /* Schriftgröße */
+  text-decoration: none; /* kein Unterstrich */
+  gap: 0.1rem;
+  font-family: "Inter", sans-serif; /* Schriftart */
+  transition: all 0.3s ease-in-out; /* sanfter Übergang */
+  font-size: 1.5rem;
+}
+.nav-action:hover {
+  background-color: transparent; /* dunkler beim Hover */
+  color: #dc203c; /* Textfarbe beim Hover */
+}
