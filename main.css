@@ -28,7 +28,6 @@ body {
   font-size: 0.8rem /* Schriftgröße */;
 }
 .nav-item {
-  margin-top: 0rem;
   text-transform: uppercase; /* Text in Großbuchstaben */
   text-decoration: none; /* kein Unterstrich */
   letter-spacing: 0.1rem; /* Abstand zwischen den Buchstaben */
@@ -80,6 +79,29 @@ body {
 .hero-action:hover {
   background-color: transparent; /* dunkler beim Hover */
   color: var(--primary-color); /* Textfarbe beim Hover */
+}
+
+.about {
+  margin: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.about-title {
+  padding: 2rem 0rem 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-decoration: underline var(--primary-color);
+  letter-spacing: 0.1rem;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: #ddd;
+  text-align: left;
 }
 
 @media only screen and (min-width: 600px) {
