@@ -16,6 +16,7 @@ body {
   color: #fff; /* Text Farbe */
 
   --primary-color: #ff3030;
+  --text-color: #ddd;
 }
 
 .nav {
@@ -48,7 +49,7 @@ body {
 
 .subtitle {
   font-size: 1rem;
-  color: #ddd;
+  color: var(--text-color);
 }
 
 .hero {
@@ -67,6 +68,10 @@ body {
 
 .hero-action {
   margin-top: 4rem;
+}
+
+.button {
+  display: inline-block; /* damit padding und border wirken */
   padding: 1rem 2rem; /* 1rem oben und unten, 2rem links und rechts */
   border: 0.1rem solid var(--primary-color); /* Rahmen */
   color: white; /* Textfarbe */
@@ -76,32 +81,53 @@ body {
   background-color: var(--primary-color); /* Hintergrundfarbe */
   transition: all 0.3s ease-in-out; /* sanfter Übergang */
 }
-.hero-action:hover {
+
+.button:hover {
   background-color: transparent; /* dunkler beim Hover */
   color: var(--primary-color); /* Textfarbe beim Hover */
 }
 
-.about {
-  margin: 0 2rem 0 2rem;
+#about {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+div {
+  unicode-bidi: isolate;
+}
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.about-content {
   display: flex;
   flex-direction: column;
-  text-align: left;
-  align-items: flex-start;
 }
 
 .about-title {
-  padding: 2rem 0rem 0;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0 1rem 0;
+  width: fit-content;
   text-decoration: underline var(--primary-color);
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem; /* Abstand zwischen den Buchstaben */
+  text-transform: uppercase; /* Text in Großbuchstaben */
 }
 
 .about-text {
-  font-size: 1rem;
-  color: #ddd;
-  text-align: left;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.about-action {
+  margin-top: 2rem;
+  width: fit-content;
+}
+
+.about-picture {
+  display: flex;
+  width: 100%;
+  height: 5%;
 }
 
 @media only screen and (min-width: 600px) {
@@ -118,9 +144,13 @@ body {
     font-size: 1.5rem;
   }
 
-  .hero-action {
+  .button {
     font-size: 1.2rem; /* Schriftgröße */
     padding: 1.2rem 2.5rem; /* 1rem oben und unten, 2rem links und rechts */
+  }
+
+  .about-text {
+    font-size: 1rem;
   }
 }
 
@@ -132,5 +162,11 @@ body {
   .title {
     font-size: 6rem;
     line-height: 6rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
   }
 }
