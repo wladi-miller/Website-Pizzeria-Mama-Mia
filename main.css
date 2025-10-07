@@ -161,12 +161,29 @@ body {
   width: 100%;
   margin-top: 1rem;
 }
-
-.day {
+.hours-entry {
   display: flex;
   justify-content: space-between;
   width: 15rem;
   margin-bottom: 0.25rem;
+}
+.day {
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-image {
+  display: flex;
+  width: 100%;
+  display: flex;
 }
 
 @media only screen and (min-width: 600px) {
