@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-.platzhalter {
-  height: 300vh;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -28,14 +24,17 @@ body {
   height: 5rem;
   font-size: 0.8rem /* Schriftgröße */;
 }
-.nav-item {
+
+.nav-item,
+.footer-item {
   text-transform: uppercase; /* Text in Großbuchstaben */
   text-decoration: none; /* kein Unterstrich */
   letter-spacing: 0.1rem; /* Abstand zwischen den Buchstaben */
   color: white; /* Textfarbe */
   transition: all 0.3s ease-in-out; /* sanfter Übergang */
 }
-.nav-item:hover {
+.nav-item:hover,
+.footer-item:hover {
   background-color: transparent; /* dunkler beim Hover */
   color: var(--primary-color); /* Textfarbe beim Hover */
 }
@@ -70,7 +69,8 @@ body {
   margin-top: 4rem;
 }
 
-.button {
+.button,
+.button-inverted {
   width: fit-content; /* damit padding und border wirken */
   padding: 1rem 2rem; /* 1rem oben und unten, 2rem links und rechts */
   border: 0.1rem solid var(--primary-color); /* Rahmen */
@@ -85,6 +85,15 @@ body {
 .button:hover {
   background-color: transparent; /* dunkler beim Hover */
   color: var(--primary-color); /* Textfarbe beim Hover */
+}
+
+.button-inverted {
+  background-color: transparent; /* Hintergrundfarbe */
+  color: var(--primary-color);
+}
+.button-inverted:hover {
+  background-color: var(--primary-color); /* Hintergrundfarbe beim Hover */
+  color: white; /* Textfarbe beim Hover */
 }
 
 .container {
@@ -183,6 +192,7 @@ body {
 .contact-contact {
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 
 .contact-image {
@@ -207,10 +217,47 @@ body {
   gap: 1rem;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #303030;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+
 @media only screen and (min-width: 600px) {
-  .nav {
+  .nav,
+  .footer-links {
     gap: 2rem;
     font-size: 1rem; /* Schriftgröße */
+  }
+
+  .footer {
+    margin-top: 4rem;
+    padding: 3rem 0rem;
+    gap: 3rem;
+  }
+
+  .footer-links {
+    flex-direction: row;
   }
 
   .title {
@@ -229,11 +276,25 @@ body {
   .about-text {
     font-size: 1rem;
   }
+  .contact-contact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .contact-image {
+    width: 60%;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
-  .nav {
+  .nav,
+  .footer-links {
     gap: 3rem;
+  }
+
+  .footer {
+    margin-top: 6rem;
   }
 
   .title {
